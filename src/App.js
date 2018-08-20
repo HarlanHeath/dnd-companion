@@ -12,7 +12,6 @@ class App extends Component {
 
   componentDidMount() {
     axios.get("/api/monsters").then(res => {
-      console.log("MUNSTERS");
       this.setState({
         creature: res.data
       });
@@ -21,7 +20,11 @@ class App extends Component {
 
   render() {
     console.log(this.state.creature);
-    return <div className="App" />;
+    return (
+      <div className="App">
+        <button> Generate a creature!</button>
+      </div>
+    );
   }
 }
 
