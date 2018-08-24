@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Nav from "./Components/Nav/Nav";
+import CContain from "./Components/CreatureContainer/CContain";
 import "./App.css";
 
 class App extends Component {
@@ -22,6 +24,8 @@ class App extends Component {
     console.log(this.state.creature);
     return (
       <div className="App">
+        <Nav />
+        <CContain />
         <button> Generate a creature!</button>
       </div>
     );
