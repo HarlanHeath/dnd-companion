@@ -25,6 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
+        <h1>DnD Companion App!</h1>
         <CContain />
         <button> Generate a creature!</button>
       </div>
