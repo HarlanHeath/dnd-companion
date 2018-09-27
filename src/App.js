@@ -20,6 +20,14 @@ class App extends Component {
     });
   }
 
+  creaturePicker = () => {
+    const creature = this.state.creature[
+      Math.floor(Math.random() * this.state.creature.length)
+    ];
+    console.log(creature);
+    axios.get(`/api/monsters/${creature.url}`).then(res => console.log(res));
+  };
+
   render() {
     console.log(this.state.creature);
     return (
@@ -27,7 +35,7 @@ class App extends Component {
         <Nav />
         <h1>DnD Companion App!</h1>
         <CContain />
-        <button> Generate a creature!</button>
+        <button onClick={this.creaturePicker}> Generate a creature!</button>
       </div>
     );
   }
