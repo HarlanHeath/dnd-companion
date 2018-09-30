@@ -15,6 +15,11 @@ export default class CSheet extends Component {
     };
   }
   render() {
-    return <div />;
+    return (
+      <div>
+        <h1>Character Info</h1>
+        <div className="char-stats">{this.state.stats}</div>
+      </div>
+    );
   }
 }

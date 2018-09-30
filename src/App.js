@@ -39,6 +39,7 @@ class App extends Component {
           <h1>DnD Companion App!</h1>
           <CContain />
           <button onClick={this.creaturePicker}> Generate a creature!</button>
+          {routes}
         </div>
       </HashRouter>
     );
