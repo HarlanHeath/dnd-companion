@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { HashRouter } from "react-router-dom";
+import routes from "./routes";
 import Nav from "./Components/Nav/Nav";
 import CContain from "./Components/CreatureContainer/CContain";
 import "./App.css";
@@ -31,12 +33,14 @@ class App extends Component {
   render() {
     console.log(this.state.creature);
     return (
-      <div className="App">
-        <Nav />
-        <h1>DnD Companion App!</h1>
-        <CContain />
-        <button onClick={this.creaturePicker}> Generate a creature!</button>
-      </div>
+      <HashRouter>
+        <div className="App">
+          <Nav />
+          <h1>DnD Companion App!</h1>
+          <CContain />
+          <button onClick={this.creaturePicker}> Generate a creature!</button>
+        </div>
+      </HashRouter>
     );
   }
 }
