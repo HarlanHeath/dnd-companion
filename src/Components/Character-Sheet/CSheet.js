@@ -15,16 +15,15 @@ export default class CSheet extends Component {
   render() {
     return (
       <div>
-        <h1>Character Info</h1>
-        <div className="attributes">
-          <ul>
-            <li>{this.state.strength}</li>
-            <li>{this.state.dexterity}</li>
-            <li>{this.state.constitution}</li>
-            <li>{this.state.charisma}</li>
-            <li>{this.state.wisdom}</li>
-            <li>{this.state.intelligence}</li>
-          </ul>
+        <div className="character-sheet">
+          <div className="attributes">
+            <div>Strength: {this.state.strength}</div>
+            <div>Dexterity: {this.state.dexterity}</div>
+            <div>Constitution: {this.state.constitution}</div>
+            <div>Charisma: {this.state.charisma}</div>
+            <div>Wisdom: {this.state.wisdom}</div>
+            <div>Intelligence: {this.state.intelligence}</div>
+          </div>
         </div>
       </div>
     );
